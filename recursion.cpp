@@ -1,6 +1,6 @@
 #include <iostream>
 #include "recursion.h"
-#include "types.h"
+#include "general/types.h"
 
 // fib(0) = 0
 // fib(1) = 1

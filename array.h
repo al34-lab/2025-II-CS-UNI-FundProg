@@ -1,7 +1,7 @@
 #ifndef __ARRAYS_H__
 #define __ARRAYS_H__
 #include <iostream>
-#include "types.h"
+#include "general/types.h"
 using namespace std;
 
 void CreateArray(ContainerElemType *&pArray, size_t n);

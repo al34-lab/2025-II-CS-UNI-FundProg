@@ -9,7 +9,10 @@ SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		recursion.cpp \
 		const.cpp \
 		structs.cpp \
-		BinaryFiles.cpp
+		BinaryFiles.cpp \
+		complex.cpp \
+		academic/student.cpp academic/professor.cpp \
+		academic/DemoAcademic.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)

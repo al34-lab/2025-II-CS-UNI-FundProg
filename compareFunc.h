@@ -1,6 +1,6 @@
 #ifndef __COMPARE_H__
 #define __COMPARE_H__
-#include "types.h"
+#include "general/types.h"
 
 // C, C++
 // typedef bool (*CompFunc)(const ContainerElemType &, const ContainerElemType &);

@@ -8,6 +8,8 @@
 #include "matrix.h"
 #include "structs.h"
 #include "BinaryFiles.h"
+#include "complex.h"
+#include "academic/academic.h"
 
 using namespace std;
 
@@ -40,7 +42,9 @@ int main(){
     // DemoConst();
     // DemoMatrixes();
     // DemoStructs();
-    DemoBinaryFiles();
+    // DemoBinaryFiles();
+    DemoComplex();
+    DemoAcademic();
     return 0;
 }
 

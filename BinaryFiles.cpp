@@ -133,17 +133,16 @@ void ejemploConContenedoresSTL() {
     // Escritura
     {
         std::ofstream archivo(nombreArchivo, std::ios::binary);
-        
         std::vector<std::string> textos = {"Hola", "Mundo", "C++17", "Binario"};
         
         // Escribir cantidad de textos
         size_t count = textos.size();
-        archivo.write(reinterpret_cast<const char*>(&count), sizeof(count));
+        archivo.write((char *)&count, sizeof(count));
         
         // Escribir cada texto (primero la longitud, luego los caracteres)
         for (const auto& texto : textos) {
             size_t longitud = texto.size();
-            archivo.write(reinterpret_cast<const char*>(&longitud), sizeof(longitud));
+            archivo.write((char *)&longitud, sizeof(longitud));
             archivo.write(texto.c_str(), longitud);
         }
         
@@ -162,7 +161,7 @@ void ejemploConContenedoresSTL() {
         
         for (size_t i = 0; i < count; ++i) {
             size_t longitud;
-            archivo.read(reinterpret_cast<char*>(&longitud), sizeof(longitud));
+            archivo.read((char *)&longitud, sizeof(longitud));
             
             std::string texto(longitud, '\0');
             archivo.read(&texto[0], longitud);

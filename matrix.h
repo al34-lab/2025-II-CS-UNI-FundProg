@@ -2,7 +2,7 @@
 #define __MATRIXES_H__
 #include <iostream>
 #include "array.h"
-// #include "types.h"
+// #include "general/types.h"
 using namespace std;
 
 void CreateMatrix(ContainerElemType **&pMatrix, size_t rows, size_t cols);

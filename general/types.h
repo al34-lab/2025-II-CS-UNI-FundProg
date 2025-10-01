@@ -8,6 +8,12 @@ using ContainerElemType = string;
 using BigNumber      = long;
 using PositiveNumber = int;
 
+using ImagType = double;
+using RealType = double;
+
+using CodeType   = long;
+using SalaryType = double;
+
 // using NameType = string;
 // using DocType  = enum {DocTypeNone, DocTypePassport, DocTypeDNI, DocTypeCE};
 
