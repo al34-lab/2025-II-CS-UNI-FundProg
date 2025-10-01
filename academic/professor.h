@@ -1,5 +1,6 @@
 #ifndef __PROFESSOR_H__
 #define __PROFESSOR_H__
+#include <string>
 #include "../general/types.h"
 
 class CProfessor{
