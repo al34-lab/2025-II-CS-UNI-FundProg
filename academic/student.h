@@ -7,7 +7,7 @@
 
 class CStudent{
 private:
-    CodeType m_code;
+    CodeType      m_code;
     std::string   m_name;
 public:
     void     SetCode(CodeType code) { m_code = code;    }
