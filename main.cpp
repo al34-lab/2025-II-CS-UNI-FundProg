@@ -10,6 +10,7 @@
 #include "BinaryFiles.h"
 #include "complex.h"
 #include "academic/academic.h"
+#include "MoveObject.h"
 
 using namespace std;
 
@@ -45,6 +46,8 @@ int main(){
     // DemoBinaryFiles();
     DemoComplex();
     DemoAcademic();
+
+    DemoMoveConstructor();
     return 0;
 }
 

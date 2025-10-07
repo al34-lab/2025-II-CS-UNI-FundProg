@@ -1,29 +1,41 @@
 
 #include <iostream>
 #include "complex.h"
+#include "MoveObject.h"
 
-int CComplex::MethodX(int n)
-{   return n+1;     }
+// Operadores
+CComplex& CComplex::operator=(CComplex c) {
+    m_r = c.GetReal();
+    m_i = c.GetImag();
+    return *this;
+}
 
-void DemoComplex(){
-    CComplex c1, c2, c3;
-    c1.SetReal(3);
-    c1.SetImag(4);
+CComplex CComplex::operator+(CComplex &c) {
+    return CComplex(GetReal() + c.GetReal(), GetImag() + c.GetImag());
+}
 
-    RealType r = c1.GetReal();
-    ImagType i = c1.GetImag();
-    std::cout << "Real: " << r << " Imag: " << i << std::endl;
+CComplex& CComplex::operator+=(CComplex &c) {
+    *this = *this + c;
+    return *this;
+}
 
-    CComplex *pC = nullptr;
-    pC = new CComplex[3];
-    for(auto i = 0 ; i < 3 ; ++i){
-        pC[i].SetReal(i);
-        pC[i].SetImag(i+5);
-    }
-    
-    for(auto i = 0 ; i < 3 ; ++i)
-        std::cout << "Complex[" << i << "] "
-                  << " Real: " << pC[i].GetReal()
-                  << " Imag: " << pC[i].GetImag() << std::endl;
-    delete [] pC;
+CComplex CComplex::operator-(CComplex &c) {
+    return CComplex(GetReal() - c.GetReal(), GetImag() - c.GetImag());
+}
+
+CComplex& CComplex::operator-=(CComplex &c) {
+    m_r -= c.GetReal();
+    m_i -= c.GetImag();
+    return *this;
+}
+
+CComplex CComplex::operator*(CComplex &c) {
+    return CComplex(GetReal() * c.GetReal() - GetImag() * c.GetImag(), 
+                    GetReal() * c.GetImag() + GetImag() * c.GetReal());
+}
+
+CComplex CComplex::operator/(CComplex &c) {
+    RealType denom = c.GetReal() * c.GetReal() + c.GetImag() * c.GetImag();
+    return CComplex((GetReal() * c.GetReal() + GetImag() * c.GetImag()) / denom,
+                    (GetImag() * c.GetReal() - GetReal() * c.GetImag()) / denom);
 }
