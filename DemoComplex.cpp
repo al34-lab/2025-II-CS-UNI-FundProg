@@ -40,7 +40,8 @@ void DemoComplex(){
         std::cout << "c1 es igual a c2" << std::endl;
     if( c1 != c2)   // Operator !=
         std::cout << "c1 es diferente a c2" << std::endl;
-    std::cout << c6 << std::endl; // Operator <<
+        
+    std::cout << c6 << "Hola" << i << std::endl; // Operator <<
 
     // p1 = (p2 * p3)/p4;
 

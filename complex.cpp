@@ -39,3 +39,8 @@ CComplex CComplex::operator/(CComplex &c) {
     return CComplex((GetReal() * c.GetReal() + GetImag() * c.GetImag()) / denom,
                     (GetImag() * c.GetReal() - GetReal() * c.GetImag()) / denom);
 }
+
+std::ostream &operator<<(std::ostream &os, CComplex &c){
+    os << "Complex(" << c.GetReal() << ", " << c.GetImag() << ")";
+    return os;
+}

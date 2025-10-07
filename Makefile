@@ -12,6 +12,7 @@ SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		BinaryFiles.cpp \
 		complex.cpp \
 		MoveObject.cpp \
+		DemoComplex.cpp \
 		academic/student.cpp academic/professor.cpp \
 		academic/DemoAcademic.cpp
 OBJS = $(SRCS:.cpp=.o)

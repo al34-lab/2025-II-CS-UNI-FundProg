@@ -57,7 +57,7 @@ class CComplex
     ImagType GetImag()       { return m_i;  }
 
     // Operadores
-    CComplex& operator=(CComplex &c);
+    CComplex& operator=(CComplex c);
 
     CComplex operator+(CComplex &c);
     CComplex& operator+=(CComplex &c);
@@ -68,6 +68,8 @@ class CComplex
     CComplex operator*(CComplex &c);
     CComplex operator/(CComplex &c);
 };
+
+std::ostream &operator<<(std::ostream &os, CComplex &c);
 
 void DemoComplex();
 
