@@ -1,0 +1,11 @@
+Professor: 
+XName  : Sandro, 
+XCodigo: 222, 
+Salary: 10000
+
+==========
+Student: 
+XName  : Xingbeck, 
+XCodigo: 777, 
+School: CS
+

@@ -12,6 +12,7 @@ SRCS = main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		BinaryFiles.cpp \
 		MoveObject.cpp \
 		DemoComplex.cpp \
+		academic/person.cpp \
 		academic/student.cpp academic/professor.cpp \
 		academic/DemoAcademic.cpp
 

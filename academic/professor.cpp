@@ -3,7 +3,7 @@
 CProfessor::CProfessor(CodeType code,
                        std::string name,
                        SalaryType salary)
-          : m_code(code), m_name(name), m_salary(salary)
+          : CPerson(code, name), m_salary(salary)
 {
 
 }
