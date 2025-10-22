@@ -1,20 +1,20 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -g -pthread -MMD -MP
-LDFLAGS = -pthread
+LDFLAGS =
 
 TARGET = main
-SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
+SRCS = main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		array.cpp matrix.cpp \
 		sorting.cpp \
 		recursion.cpp \
 		const.cpp \
 		structs.cpp \
 		BinaryFiles.cpp \
-		complex.cpp \
 		MoveObject.cpp \
 		DemoComplex.cpp \
 		academic/student.cpp academic/professor.cpp \
 		academic/DemoAcademic.cpp
+
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(OBJS:.o=.d)
 

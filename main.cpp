@@ -44,10 +44,10 @@ int main(){
     // DemoMatrixes();
     // DemoStructs();
     // DemoBinaryFiles();
+    // DemoMoveConstructor();
     DemoComplex();
     DemoAcademic();
 
-    DemoMoveConstructor();
     return 0;
 }
 
