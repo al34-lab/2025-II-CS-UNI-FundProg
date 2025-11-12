@@ -4,9 +4,6 @@
 
 using namespace std;
 
-// ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
-ContainerElemType arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
-
 // Bubble  
 void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
     if (n <= 1)
@@ -20,26 +17,18 @@ void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
     }
 }
 
-// Bubble
-
-void BurbujaRecursivo(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
-    if (n <= 1)
-        return;
-    for (auto j = 1; j < n; ++j)
-        if ( (*pComp)(arr[j], arr[0]) )
-            intercambiar(arr[0], arr[j]);
-    BurbujaRecursivo(arr+1, n-1, pComp);
-}
-
 void DemoBurbuja(){
     cout << "DemoBurbuja \n";
+    // ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+    string arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
+
     auto n = sizeof(arr) / sizeof(arr[0]);
 
-    BurbujaRecursivo(arr, n, &Mayor);
+    BurbujaRecursivo(arr, n, &Mayor<string>); 
     cout << "Array ordenado Ascendente:\n";
     PrintArray(arr, 10, cout);
 
-    BurbujaRecursivo(arr, n, &Menor);
+    BurbujaRecursivo(arr, n, &Menor<string>);
     cout << "Array ordenado Descendente:\n";
     PrintArray(arr, 10, cout);
 

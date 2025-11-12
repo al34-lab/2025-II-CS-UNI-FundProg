@@ -7,7 +7,12 @@
 // C++11 en adelante
 using CompFunc = bool (*)(const ContainerElemType &, const ContainerElemType &);
 
-bool Mayor(const ContainerElemType &a, const ContainerElemType &b);
-bool Menor(const ContainerElemType &a, const ContainerElemType &b);
+template <typename T>
+bool Mayor(const T &a, const T &b)
+{ return a > b;  }
+
+template <typename T>
+bool Menor(const T &a, const T &b)
+{ return a < b;  }
 
 #endif // __COMPARE_H__

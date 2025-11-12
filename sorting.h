@@ -13,7 +13,18 @@ void intercambiar(T &a, T &b){
 }
 
 void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp);
-void BurbujaRecursivo(ContainerElemType* arr, ContainerRange n, CompFunc pComp);
+
+// Bubble
+template <typename T>
+void BurbujaRecursivo(T* arr, T n, bool (*pComp)(const T &, const T &)) {
+    if (n <= 1)
+        return;
+    for (auto j = 1; j < n; ++j)
+        if ( pComp(arr[j], arr[0]) )
+            intercambiar(arr[0], arr[j]);
+    BurbujaRecursivo(arr+1, n-1, pComp);
+}
+
 void DemoBurbuja();
 
 ContainerRange  particionar(ContainerElemType* arr, ContainerRange first, ContainerRange last, CompFunc pComp);
