@@ -13,15 +13,13 @@ public:
     void       SetSalary(SalaryType salary){ m_salary = salary; }
     SalaryType GetSalary()                 { return m_salary;   }
 
-    std::string ToString(){
+    std::string ToString() override {
         std::stringstream stream;
     
-        stream << "Professor: " << std::endl;
-        // Comun
-        stream << CPerson::ToString();
-        // Specifica
-        stream << "Salary: " << GetSalary() << std::endl;
-        
+        stream << "Professor: " << std::endl
+               << CPerson::ToString()       // Comun
+               << "Salary: " << GetSalary() // Specifica
+               << std::endl;
         return stream.str();
     }
 };

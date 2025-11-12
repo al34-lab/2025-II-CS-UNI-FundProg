@@ -17,7 +17,7 @@ public:
     void        SetName(std::string name) { m_name = name;    }
     std::string GetName()                 { return m_name;    }
 
-    std::string ToString(){
+    virtual std::string ToString(){
         std::stringstream stream;
     
         // Comun

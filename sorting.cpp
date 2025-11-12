@@ -6,12 +6,6 @@ using namespace std;
 
 // ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
 ContainerElemType arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
-    
-void intercambiar(ContainerElemType &a, ContainerElemType &b){
-    ContainerElemType tmp = a;
-    a = b;
-    b = tmp;
-}
 
 // Bubble  
 void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
@@ -27,6 +21,7 @@ void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
 }
 
 // Bubble
+
 void BurbujaRecursivo(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
     if (n <= 1)
         return;
@@ -175,6 +170,28 @@ void DemoSorting(){
     DemoBurbuja();
     // QuickSort añadido
     DemoQuickSort();
-
     DemoMergeSort();
 }
+
+template <typename T>
+void Print(T &p1, T &p2){
+    cout << "p1: " << p1 << " p2: " << p2 << endl;
+}
+
+template <>
+void Print(char &p1, char &p2){
+    cout << "char1: " << p1 << " char2: " << p2 << endl;
+}
+
+void DemoTemplates(){
+    int    a = 5, b = 8;
+    double x = 20, y = 30;
+    string str1="CS", str2 = "UNI";
+    char   c1 = 'X', c2 = 'Y';
+
+    Print(a, b);
+    Print(x, y);
+    Print(str1, str2);
+    Print(c1, c2);
+}
+

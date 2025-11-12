@@ -45,9 +45,10 @@ int main(){
     // DemoStructs();
     // DemoBinaryFiles();
     // DemoMoveConstructor();
-    DemoComplex();
-    DemoAcademic();
-
+    // DemoComplex();
+    // DemoAcademic();
+    
+    DemoTemplates();
     return 0;
 }
 

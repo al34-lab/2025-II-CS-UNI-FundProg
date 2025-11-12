@@ -14,18 +14,14 @@ public:
     void        SetSchool(std::string school){ m_school = school;    }
     std::string GetSchool()                 { return m_school;    }
 
-    std::string ToString(){
+    std::string ToString() override {
         std::stringstream stream;
-    
-        stream << "Student: " << std::endl;
-        // Comun
-        stream << CPerson::ToString();
-        // Specifica
-        stream << "School: " << GetSchool() << std::endl;
-        
+        stream << "Student: " << std::endl
+               << CPerson::ToString()       // Comun
+               << "School: " << GetSchool() // Specifica
+               << std::endl;
         return stream.str();
     }
 };
-
 
 #endif // __ALUMNO_H__

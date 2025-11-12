@@ -5,6 +5,13 @@
 
 using ContainerRange = int;
 
+template <typename T>
+void intercambiar(T &a, T &b){
+    T tmp = a;
+    a = b;
+    b = tmp;
+}
+
 void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp);
 void BurbujaRecursivo(ContainerElemType* arr, ContainerRange n, CompFunc pComp);
 void DemoBurbuja();
@@ -18,5 +25,6 @@ void MergeSort(ContainerElemType* arr, const ContainerRange begin, const Contain
 void DemoMergeSort();
 
 void DemoSorting();
+void DemoTemplates();
 
 #endif // __SORTING_H__
