@@ -16,12 +16,6 @@ void ReadArray(ContainerElemType *pArray, size_t n){
     }
 }
 
-void PrintArray(ContainerElemType *pArray, size_t n, ostream &os){
-    for(size_t i = 0 ; i < n ; ++i)
-        os << pArray[i] << " ";
-    os << endl;
-}
-
 void DestroyArray(ContainerElemType *&pArray){
     cout << "Liberando la memoria asignada" << endl;
     delete [] pArray;    // Liberar la memoria

@@ -36,7 +36,7 @@ using namespace std;
 int main(){
     cout << "Hello CS-UNI" << endl;
     // DemoParametros();
-    // DemoSorting();
+    DemoSorting();
     // DemoArrays();
     // DemoRecursion();
     // VariablesOverflow();
@@ -47,7 +47,6 @@ int main(){
     // DemoMoveConstructor();
     // DemoComplex();
     // DemoAcademic();
-    
     DemoTemplates();
     return 0;
 }

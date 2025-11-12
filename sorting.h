@@ -16,7 +16,7 @@ void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp);
 
 // Bubble
 template <typename T>
-void BurbujaRecursivo(T* arr, T n, bool (*pComp)(const T &, const T &)) {
+void BurbujaRecursivo(T arr[], ContainerRange n, bool (*pComp)(const T &, const T &)) {
     if (n <= 1)
         return;
     for (auto j = 1; j < n; ++j)

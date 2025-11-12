@@ -1,7 +1,6 @@
 #include <iostream>
 #include "sorting.h"
 #include "array.h"
-
 using namespace std;
 
 // Bubble  
@@ -16,23 +15,26 @@ void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
         }
     }
 }
+template <typename T>
+void SortContainer(T *vect, ContainerRange n){
+    BurbujaRecursivo(vect, n, &::Mayor<T>); 
+    cout << "Array ordenado Ascendente:\n";
+    PrintArray(vect, n, cout);
 
+    BurbujaRecursivo(vect, n, &::Menor<T>);
+    cout << "Array ordenado Descendente:\n";
+    PrintArray(vect, n, cout);
+    cout << endl;
+}
 void DemoBurbuja(){
     cout << "DemoBurbuja \n";
-    // ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
-    string arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
+    int arr1[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+    auto n = sizeof(arr1) / sizeof(arr1[0]);
+    SortContainer(arr1, n);
 
-    auto n = sizeof(arr) / sizeof(arr[0]);
-
-    BurbujaRecursivo(arr, n, &Mayor<string>); 
-    cout << "Array ordenado Ascendente:\n";
-    PrintArray(arr, 10, cout);
-
-    BurbujaRecursivo(arr, n, &Menor<string>);
-    cout << "Array ordenado Descendente:\n";
-    PrintArray(arr, 10, cout);
-
-    cout << endl;
+    string arr2[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
+    n = sizeof(arr2) / sizeof(arr2[0]);
+    SortContainer(arr2, n);
 }
 
 ContainerRange particionar(ContainerElemType* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
@@ -62,6 +64,8 @@ void QuickSort( ContainerElemType* arr,
 
 void DemoQuickSort() {
     cout << "DemoQuickSort \n";
+    // ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+    string arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
     auto n = sizeof(arr) / sizeof(arr[0]);
 
     QuickSort(arr, 0, n - 1, &Mayor);
@@ -142,6 +146,9 @@ void MergeSort( ContainerElemType* arr,
 
 void DemoMergeSort(){
     cout << "DemoMergeSort" << endl;
+    // ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+    string arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
+
     auto n = sizeof(arr) / sizeof(arr[0]);
 
     MergeSort(arr, 0, n-1, &Mayor);

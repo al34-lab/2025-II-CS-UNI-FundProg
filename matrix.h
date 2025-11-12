@@ -5,10 +5,12 @@
 // #include "general/types.h"
 using namespace std;
 
+// TODO: Convertir estas 4 funciones en templates
 void CreateMatrix(ContainerElemType **&pMatrix, size_t rows, size_t cols);
 void ReadMatrix(ContainerElemType *pMatrix, size_t rows, size_t cols);
 void PrintMatrix(ContainerElemType *pMatrix, size_t rows, size_t cols, ostream &os);
 void DestroyMatrix(ContainerElemType *&pMatrix, size_t rows);
+
 void DemoMatrixes();
 
 #endif // __MATRIXES_H__
