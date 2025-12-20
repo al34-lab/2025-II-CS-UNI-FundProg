@@ -1,0 +1,3 @@
+Hola CS UNI. Este es un documento de prueba.
+Añadir a este documento palabras para probar el buscador.
+Por ejemplo: "computer".

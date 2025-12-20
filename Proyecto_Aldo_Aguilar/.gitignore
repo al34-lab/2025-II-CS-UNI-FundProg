@@ -1,0 +1,9 @@
+# Archivos compilados y ejecutables
+*.exe
+*.o
+*.out
+*.app
+
+
+# Configuración de VSCode 
+.vscode/
